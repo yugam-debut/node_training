@@ -1,5 +1,5 @@
-module.exports = function(){
-    document.getElementById("eventForm").submit(function (e) {
+$(document).ready(function(){
+    $("#eventForm").on('submit', function(e){
         e.preventDefault();
         console.log("Hello");
         var fd = new FormData($(this)[0]);
@@ -13,6 +13,5 @@ module.exports = function(){
                 console.log(data);
             }
         });
-    });
- }
- 
+    })
+});
